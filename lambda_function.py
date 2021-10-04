@@ -20,12 +20,12 @@ def lambda_handler(event, context):
 	#returns HTTP response
 	return {
     		"statusCode": 200,
-    		"statusDescription": "200 OK",
-    		"isBase64Encoded": False,
-    		"headers": {
-        		"Content-Type": "text/html"
-    		},
-    		"body": "<h1>API Demo</h1> <h2> WeatherFlow Weather Station Data<h2> <p1>{}<p2> <h3>Nest Thermostat Data<h3> <p2>{}<p2>".format(wds, gds)
+		"statusDescription": "200 OK",
+		"isBase64Encoded": False,
+		"headers": {
+			"Content-Type": "text/html"
+		},
+		"body": "<h1>API Demo</h1> <h2> WeatherFlow Weather Station Data<h2> <p1>{}<p2> <h3>Nest Thermostat Data<h3> <p2>{}<p2>".format(wds, gds)
 	}
 
 def get_weatherflow_data():
