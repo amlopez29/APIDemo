@@ -32,8 +32,8 @@ def get_weatherflow_data():
     wf_access_token = "ad4e4993-334e-4459-83cf-f4511bdbec28"
     observation_url = "https://swd.weatherflow.com/swd/rest/observations/station/{}?token={}".format(wf_station_id, wf_access_token)
 
-    oberservations = requests.get(observation_url)
-    return oberservations
+    observations = requests.get(observation_url)
+    return observations
 
 
 def get_google_status(thermostat):
@@ -41,8 +41,8 @@ def get_google_status(thermostat):
 
 def set_thermostat_temp(weather_data, thermostat):
     local_weather_data = weather_data.json()
-    oberservations = local_weather_data.get("obs")
-    air_temp = oberservations[0].get("air_temperature")
+    observations = local_weather_data.get("obs")
+    air_temp = observations[0].get("air_temperature")
     if air_temp <= 23.3:
         thermostat.set_cool(22.8)
     elif air_temp > 23.3 and air_temp <= 29.4:
