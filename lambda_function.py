@@ -1,4 +1,3 @@
-
 import requests
 import json
 import nest_devices
@@ -17,7 +16,7 @@ def lambda_handler(event, context):
     wds = json.dumps(weather_data.json(), indent=4)
     gds = json.dumps(google_data.json(), indent=4)
     
-    #returns HTTP response
+    #Returns HTTP response
     return {
             "statusCode": 200,
             "statusDescription": "200 OK",
