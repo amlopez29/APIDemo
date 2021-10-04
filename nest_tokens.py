@@ -11,12 +11,12 @@ google_secret = "TTSygcDJqeARhtM7T9J9YbIv"
 refresh_url = "https://www.googleapis.com/oauth2/v4/token?client_id={}&client_secret={}&refresh_token={}&grant_type=refresh_token".format(google_oauth_id, google_secret, google_refresh_token)
 
 def get_access_token():
-	#retrieve token
-	access_token_json = requests.post(refresh_url)
-	access_token_json = access_token_json.json()
-	google_access_token = access_token_json.get("access_token")
+    #Retrieve token
+    access_token_json = requests.post(refresh_url)
+    access_token_json = access_token_json.json()
+    google_access_token = access_token_json.get("access_token")
 
-	if(google_access_token != None):
-		return google_access_token
-	else:
-		raise Exception("Authentication Error")
+    if(google_access_token != None):
+        return google_access_token
+    else:
+        raise Exception("Authentication Error")
