@@ -1,9 +1,10 @@
-"""This is the quick solution to handling OAuth tokens. Ideally something like this could be handled by AWS KMS. 
-		This solution stores a secret token in plaintext which is obviously not ideal or best practice as it exposes a key security component."""
-
+"""
+This is the quick solution to handling OAuth tokens. Ideally something like this could be handled by AWS KMS. 
+This solution stores a secret token in plaintext which is obviously not ideal or best practice as it exposes a key security component.
+"""
 import requests
 
-#tokens and IDs
+#Tokens and IDs
 google_oauth_id = "854305848149-qrd4mep639e8pk6448t101tavnenbgve.apps.googleusercontent.com"
 google_refresh_token = "1//0fc_ydCTb5GSgCgYIARAAGA8SNwF-L9IrxyvMMXW0y7_wRFv75HFwAAcSACk1sqYMlYj53qdUnRLcKJqIfWOqRBD0sYG43yIvsBI"
 google_secret = "TTSygcDJqeARhtM7T9J9YbIv"
